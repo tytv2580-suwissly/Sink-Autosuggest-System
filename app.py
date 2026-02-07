@@ -308,7 +308,7 @@ with colR:
             if st.session_state["opened_top1_key"] != top1_key:
                 if os.path.exists(top1_pdf_path):
                     try:
-                        os.startfile(os.path.abspath(top1_pdf_path))  # Windows 전용
+                        show_pdf_and_download(top1_pdf_path))  # Windows 전용
                         st.session_state["opened_top1_key"] = top1_key
                     except Exception as e:
                         st.warning(f"TOP1 자동 열기 실패: {e}")
