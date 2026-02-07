@@ -6,8 +6,22 @@ import platform
 from dataclasses import dataclass
 from typing import Dict, Tuple, List, Optional
 
-import pandas as pd
 import streamlit as st
+import pandas as pd
+
+# 🔐 비밀번호 인증 
+st.sidebar.title("🔐 로그인") 
+password = st.sidebar.text_input("비밀번호를 입력하세요", type="password") 
+
+# 설정한 비밀번호 (원하는 값으로 변경 가능) 
+PASSWORD = "sas911**"
+
+if password != PASSWORD: 
+   st.warning("올바른 비밀번호를 입력해야 시뮬레이터를 사용할 수 있습니다.") 
+   st.stop() 
+
+# 여기부터는 로그인 성공 시 실행되는 앱 본문 st.title("싱크대 도면 자동 추천 시스템") 
+st.write("로그인 성공! 앱을 사용할 수 있습니다.")
 
 
 # =========================
