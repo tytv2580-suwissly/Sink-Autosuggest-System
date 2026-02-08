@@ -212,7 +212,7 @@ def uniq_sorted(df: pd.DataFrame, col: str, fallback: List[str]) -> List[str]:
 # 7) Streamlit UI
 # =========================
 st.set_page_config(page_title="싱크대 도면 자동 추천(Pre-AI)", layout="wide")
-st.title("싱크대 도면 자동 추천 시스템 (엑셀 로직 기반)")
+st.title("설계 DB 기반 싱크대 도면 검증 및 자동 제공 시스템") # AI의 기초작업 의미로 타이틀 변경
 
 with st.sidebar:
     st.header("환경 설정")
